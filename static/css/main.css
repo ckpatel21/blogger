@@ -1,0 +1,106 @@
+
+  
+  main {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 4rem;
+    min-height: calc(100vh - 60px); }
+
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio' ;
+    grid-template-columns: repeat(3, 1fr); }
+    .about-info .bio-image {
+      grid-area: auto;
+      margin: auto;
+      border-radius: 50%;
+      border: #eece1a 3px solid; 
+    }
+    .about-info .bio {
+      grid-area: bio;
+      font-size: 1.5rem; }
+
+
+      /*-- here////////////////////////////--*/
+      .wrapper{
+        text-align: center;
+      }
+      
+      .list-unstyled {
+        padding-left: 0;
+        list-style: none;
+      }
+      .list-inline li {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-bottom: 10px;
+      }
+      /*---- Genral classes end -------*/
+      
+      /*Change icons size here*/
+      .social-icons .fa {
+        font-size: 1.5rem;
+      }
+      /*Change icons circle size and color here*/
+      .social-icons .fa {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #FFF;
+        color: rgba(255, 255, 255, 0.8);
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .social-icons.icon-circle .fa{ 
+        border-radius: 50%;
+      }
+      
+      
+      .social-icons .fa-facebook{background-color:#3C599F;}  
+      .social-icons .fa-github{background-color:#070709;} 
+      .social-icons .fa-google-plus{background-color:#CF3D2E;} 
+      .social-icons .fa-instagram{background-color:#A1755C;}
+      .social-icons .fa-linkedin{background-color:#0085AE;} 
+
+
+    
+  
+
+
+  
+  @media screen and (max-width: 768px) {
+    main {
+      align-items: center;
+      text-align: center; }
+      
+
+    
+
+    .about-info {
+      grid-template-areas: 'bioimage' 'bio';
+      grid-template-columns: 1fr; }
+      .bio-image {
+        width: 120px;
+        height: 120px;
+      }
+      .about-info .bio {
+        grid-area: bio;
+        font-size: 1rem; }
+       
+  }
+  
+  @media screen and (max-width: 500px) {
+    main {
+      padding: 2rem; }
+      
+     
+   }
+
+

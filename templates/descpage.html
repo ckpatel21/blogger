@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+<div class="descpage" style="padding: 10%;">
+<div class="card mb-3">
+  <h3 class="card-header">{{ batman.title }}</h3>
+  <div class="card-body">
+    <h5 class="card-title">{{ batman.text }}</h5>
+    <h6 class="card-subtitle text-muted">Posted on:{{ batman.time }}</h6>
+  </div>
+  {% if batman.image %}
+  <img style="height: 250px; width: 100%; display: block;" src="{{  batman.image.url }}" alt="Card image">
+  {% endif %}
+
+  <div class="card-body">
+    <p class="card-text">{{ batman.desc }}</p>
+  </div>
+</div>
+</div>
+<button type="button" class="btn btn-light" style="padding-left: 45%; padding-right: 45%;"><a href="/">Back!</a></button>
+
+
+{% endblock content %}
+
+
+

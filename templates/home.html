@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<main id="about">
+
+    <div class="about-info">
+      <img src="{% static 'img/pt.jpg' %}" alt="chinatn" class="bio-image">
+
+      <div class="bio">
+        <h3  class="text-secondary">Hey !!</h3>
+        <h3>I'm CHINTAN PATEL</h3>
+        <hr>
+        <p>Welcome to <br> My Personal BLog Page.</p>
+        
+        
+      </div>
+      
+    </div>
+    <hr>
+    
+
+    {% for arti in object_list %}
+    
+        <div class="card mb-4">
+      <div class="card h-100">
+      {% if arti.image %}
+      <img src="{{ arti.image.url }}" class="card-img-top" style="height: 250px; width: 100%; display:block;">
+        {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ arti.title }}</h5>
+              <p class="card-text">{{ arti.text }}</p>
+              <p class="card-text"><small class="text-muted">Posted on:{{ arti.time }}</small></p>
+              <button><a href="{% url 'desc_page' arti.pk %}">read more</a></button>
+          </div>
+    </div>
+    </div>
+
+
+
+
+      
+    {% endfor %}
+
+    <hr>
+    
+    <span align="center">Find Me Here...</span>
+
+  <div class="wrapper">
+	    <ul class="social-icons icon-circle list-unstyled list-inline"> 
+	      <li> <a href="https://www.facebook.com/profile.php?id=100043187899662"><i class="fa fa-facebook"></i></a></li> 
+	      <li> <a href="https://github.com/ckpatel21"><i class="fa fa-github"></i></a></li> 
+	      <li> <a href="ckpatel256@gmail.com"><i class="fa fa-google-plus"></i></a></li> 
+	      <li> <a href="https://www.instagram.com/ck_patel_21"><i class="fa fa-instagram"></i></a></li> 
+	      <li> <a href="https://www.linkedin.com/in/chintan-patel-7ba687192"><i class="fa fa-linkedin"></i></a></li> 
+	       
+	  	</ul>
+	</div> 
+    
+</main>
+
+
+
+
+
+{% endblock content %}
