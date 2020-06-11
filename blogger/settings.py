@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'c2$gq(p(_3iigc@q5pmzfws@7nsmw5
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,7 +124,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(os.path.join(BASE_DIR,"media_cdn"))
 
